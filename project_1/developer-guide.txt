@@ -1,0 +1,61 @@
+1. npm install -g create-react-app
+2. npx create-react-app project_1
+3. cd project_1
+4. npm install web-vitals (if dependency is missing)
+5. npm start
+____________________________________________________________________
+
+Components in react
+
+ Component in react is just like function in javascript.
+ In React we have two type of components.
+    1. Class components - It is based on class (Its old now.)
+    2. Functional components - It is based on function. Based on hooks. (like function in javascript)
+
+____________________________________________________________________
+
+JSX - javascript and XML (html + javascript + xml rules)
+
+    JSX rules
+
+    1. If inside a component more than 1 jsx elements(tags) are required then keep inside parent elements.
+        eg:
+            <div>
+                <h1>Welcome to React</h1>
+                <p>The empty tag is working </p>
+                
+            </div>
+    2. The parent JSX element can be empty tag also.
+        eg:    <>
+                <h1>Welcome to React</h1>
+                <p>The empty tag is working </p>
+                
+            </>
+    3. The parent or child element can be user defined also.
+        eg:
+
+            <abc>
+                <h1>Welcome to React</h1>
+                <p>The empty tag is working </p>
+                <xyz> xyz is working ...</xyz>
+            </abc>
+    
+    4. The parent JSX element can be [] array also.
+        In case of array after every elemet ',' is required
+
+        eg:
+
+            [
+
+                <abc>
+                    <h1>Welcome to React</h1>
+                    <p>The empty tag is working </p>
+                    <xyz> xyz is working ...</xyz>
+                </abc>,
+                <h1>Hello</h1>,
+                <>
+                    <h1>Welcome to React</h1>
+                    <p>The empty tag is working </p>
+                    <xyz> xyz is working ...</xyz>
+                </>
+            ]

@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  width: 80%;
+  margin:auto;
+  min-height: 400px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.four {
+  margin: 2%;
+  color:blue;
+  font-size: 2rem;
+  display: inline-block;
+  width: 20%;
+}
+
+.two {
+  margin: 2%;
+  color:blue;
+  font-size: 2rem;
+  display: inline-block;
+  width: 40%;
+}
+
+.container li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right : 1rem;
+  border : 1px solid red;
+  border-radius: 1rem;
+  box-shadow: 4px 2px 4px 2px greenyellow;
+  padding: 1rem;
+}
+
+nav {
+  padding : 2rem;
+  text-align: center;
+  background-color: lightcyan;
+  border-bottom: 2px solid lightgrey;
+}
+
+.toplink {
+  text-decoration: none;
+  margin-right : 1rem;
+  padding : 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+fieldset {
+  display: inline-block;
+  border: 2px solid green;
+  border-radius: 1rem;
+  margin-right: 2rem;
+  padding: 2rem;
+}
+
+fieldset legend {
+  margin-bottom: 0.5rem;
+}
+
+fieldset p {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+fieldset b,strong{
+  color : red;
+  font-size: 1.5rem;
+}
+
+.userData {
+  margin-bottom: 0.5rem;
+}
+.userData label {
+  padding: 0.5rem;
+}
+.userData input {
+  margin: 0.5rem;
+}
+.userForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.stats {
+  background-color: #5580AA;
+  border-radius: 1rem;
+  width: 15%;
+  margin: auto;
+}
+
+.stats p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+table.table-customers {
+  text-align: center;
+}
+table.table-customers thead tr th{
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  color : grey;
+}
+
+table.table-customers tbody tr td{
+  font-weight: 600;
+  color : rgba(0,0,0,0.75);
+  background-color: rgba(55,80,170,0.25);
+}
+
