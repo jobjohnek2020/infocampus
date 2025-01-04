@@ -9,7 +9,7 @@ import HookFour from "./hooks/hook_4";
 import ApiOne from "./api/api_1";*/
 import Customer from "./api/Customer";
 import Product from "./api/Product";
-import Employee from "./api/Employee";
+import Employees from "./api/Employees";
 function App() {
   return (
     <HashRouter>
@@ -43,7 +43,7 @@ function App() {
         <Route exact path="/api1" element={<ApiOne/>}/>*/}
         <Route exact path="/customers" element={<Customer/>}/>
         <Route exact path="/products" element={<Product/>}/>
-        <Route exact path="/employees" element={<Employee/>}/>
+        <Route exact path="/employees" element={<Employees/>}/>
       </Routes>
     </HashRouter>
   );

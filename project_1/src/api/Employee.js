@@ -1,46 +1,74 @@
-import { useState, useEffect } from "react";
-export default function Employee() {
-    const [employees, setEmployees] = useState([]);
-    useEffect(() => {
-        fetch("http://localhost:1234/empapi")
-            .then(i => i.json())
-            .then(i => setEmployees(i));
-    }, [employees]);
+import { Image } from "react-bootstrap";
+import EmployeeDelete from "./EmployeeDelete";
+import { useState } from "react";
+export default function Employee({ employee, index }) {
+  const getName = (employee) => {
+    let name = employee.name;
+    return name.title + " " + name.first + " " + name.last;
+  };
 
-    return (
-        <>
-            <h1 style={{textAlign:"center",marginBottom:"2rem", marginTop:"2rem"}}>{employees.length} Employees</h1>
-            <table align="center">
-                <thead>
-                    <tr>
-                        <th style={{textAlign:"center"}}>Sl No</th>
-                        <th style={{textAlign:"center"}}>Name</th>
-                        <th style={{textAlign:"center"}}>Email</th>
-                        <th style={{textAlign:"center"}}>Phone</th>
-                        <th style={{textAlign:"center"}}>Gender</th>
-                        <th style={{textAlign:"center"}}>Country</th>
-                        <th style={{textAlign:"center"}}>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        employees.map((employee,index) => (
-                            <tr key={index}>
-                                <td style={{textAlign:"center"}}>{index+1}</td>
-                                <td style={{textAlign:"center"}}>{employee.name.first + " " + employee.name.last}</td>
-                                <td style={{textAlign:"center"}}>{employee.email}</td>
-                                <td style={{textAlign:"center"}}>{employee.phone}</td>
-                                <td style={{textAlign:"center"}}>{employee.gender}</td>
-                                <td style={{textAlign:"center"}}>{employee.nat}</td>
-                                <td>
-                                    <button type="submit">Delete</button>
-                                    <button type="submit">Edit</button>
-                                </td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
-        </>
-    )
+  const getGender = (employee) => {
+    switch (employee.gender) {
+      case "male":
+        return (
+          <>
+            <i className="bi bi-gender-male"></i>
+          </>
+        );
+      case "female":
+        return (
+          <>
+            <i className="bi bi-gender-female"></i>
+          </>
+        );
+      default:
+        return (
+          <>
+            <i className="bi bi-gender-ambiguous"></i>
+          </>
+        );
+    }
+  };
+
+  const getDOB = (dob) => {
+    const d = new Date(dob);
+    return d.getDay() + "/" + d.getMonth() + "/" + d.getFullYear();
+  };
+
+  const[show,setShow] = useState(false);
+  const handleClose = () => {
+    setShow(false);
+  };
+  
+  return (
+    <>
+      <tr key={index} className="text-center">
+        <td>
+          <div className="d-flex align-items-center">
+            <p className="d-inline-block px-1">{getGender(employee)}</p>
+            <Image
+              src={employee.picture.thumbnail}
+              className="d-inline-block px-1"
+              alt="employee image"
+              roundedCircle
+            />
+            <p className="d-inline-block px-1 fw-600">{getName(employee)}</p>
+          </div>
+        </td>
+        <td className="fw-600">{getDOB(employee.dob.date)}</td>
+        <td className="fw-600">{employee.email}</td>
+        <td className="fw-600">{employee.phone}</td>
+        <td className="fw-600">{employee.nat}</td>
+        <td>
+          <button className="btn btn-dark">
+            <i className="bi bi-pencil"></i>
+          </button>
+          <button className="btn text-dark" onClick={()=> setShow(true)}>
+            <i className="bi bi-trash"></i>
+          </button>
+          <EmployeeDelete isShow={show} handleClose={handleClose} employee={employee}/>
+        </td>
+      </tr>
+    </>
+  );
 }

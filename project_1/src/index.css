@@ -127,3 +127,7 @@ table.table-customers tbody tr td{
   background-color: rgba(55,80,170,0.25);
 }
 
+.fw-600 {
+  font-weight: 600;
+}
+
