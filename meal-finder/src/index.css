@@ -15,3 +15,11 @@ code {
   overflow-y: scroll;
   max-height: 6rem;
 }
+
+.recipe-basic {
+  background-color: #FFF2DF;
+}
+.ingredient-scroll{
+  max-height: 20rem;
+  overflow-y: scroll;
+}
