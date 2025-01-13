@@ -42,10 +42,7 @@ export default function EmployeeSave() {
         date: dob,
       },
       phone: phone,
-      nat: country,
-      picture:{
-        thumbnail:"https://randomuser.me/api/portraits/thumb/women/5.jpg"
-      }
+      nat: country
     };
     let headers = {
       "content-type": "application/json",
@@ -86,7 +83,9 @@ export default function EmployeeSave() {
             >
               <option>Title</option>
               <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
               <option value="Ms">Ms</option>
+              <option value="Miss">Miss</option>
             </Form.Select>
             <Form.Control
               type="text"
@@ -107,7 +106,7 @@ export default function EmployeeSave() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <Form.Control
-              type="number"
+              type="text"
               placeholder="Phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}

@@ -4,7 +4,7 @@ import Employee from "./Employee";
 export default function EmployeesTable({ employees }) {
   
   return (
-    <div className="shadow-lg">
+    <div className="shadow-lg mb-5">
       <Table responsive striped="columns" hover>
         <thead>
           <tr className="text-center">
