@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/meal-finder/static/css/main.d9600902.css",
-    "main.js": "/meal-finder/static/js/main.938d82cc.js",
-    "static/js/488.ffcb98d9.chunk.js": "/meal-finder/static/js/488.ffcb98d9.chunk.js",
-    "index.html": "/meal-finder/index.html",
-    "main.d9600902.css.map": "/meal-finder/static/css/main.d9600902.css.map",
-    "main.938d82cc.js.map": "/meal-finder/static/js/main.938d82cc.js.map",
-    "488.ffcb98d9.chunk.js.map": "/meal-finder/static/js/488.ffcb98d9.chunk.js.map"
+    "main.css": "/infocampus/meal-finder/static/css/main.d9600902.css",
+    "main.js": "/infocampus/meal-finder/static/js/main.1b10f78c.js",
+    "static/js/488.ffcb98d9.chunk.js": "/infocampus/meal-finder/static/js/488.ffcb98d9.chunk.js",
+    "index.html": "/infocampus/meal-finder/index.html",
+    "main.d9600902.css.map": "/infocampus/meal-finder/static/css/main.d9600902.css.map",
+    "main.1b10f78c.js.map": "/infocampus/meal-finder/static/js/main.1b10f78c.js.map",
+    "488.ffcb98d9.chunk.js.map": "/infocampus/meal-finder/static/js/488.ffcb98d9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9600902.css",
-    "static/js/main.938d82cc.js"
+    "static/js/main.1b10f78c.js"
   ]
 }
