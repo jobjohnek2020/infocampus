@@ -21,5 +21,6 @@ code {
 }
 .ingredient-scroll{
   max-height: 20rem;
+  max-width: 20rem;
   overflow-y: scroll;
 }
