@@ -25,17 +25,16 @@ export default function Meal() {
                     meal.map((m) => (
                         <div key={m.idMeal}>
                             <Row className="recipe-basic mt-5 px-5">
-                                <Col lg={9}>
+                                <Col lg={6}>
                                     <div className="text-center">
                                         <Image src={m.strMealThumb} style={{ width: "100%", height: "50%" }} />
                                     </div>
                                 </Col>
-                                <Col lg={3}>
+                                <Col lg={6}>
                                     <MealRecipeBasic meal={m} />
                                 </Col>
                             </Row>
                             <Row>
-                                
                                 <Col lg={12}>
                                     <MealRecipeDirections meal={m} />
                                 </Col>

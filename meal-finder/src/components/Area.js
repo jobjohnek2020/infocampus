@@ -19,8 +19,8 @@ export default function Area(){
     }, []);
 
     return (
-        <Dropdown onSelect={(e)=> handleFilterValue(e)}>
-            <Dropdown.Toggle variant="info">
+        <Dropdown onSelect={(e)=> handleFilterValue(e)} className="mb-2 me-2">
+            <Dropdown.Toggle variant="dark">
                 {area}
             </Dropdown.Toggle>
 

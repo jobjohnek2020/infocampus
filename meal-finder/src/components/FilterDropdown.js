@@ -16,9 +16,9 @@ export default function FilterDropdown() {
         dispatch(data);
     };
     return (
-        <>
-            <Dropdown onSelect={(e) => handleFilter(e)}>
-                <Dropdown.Toggle variant="info">
+        
+            <Dropdown onSelect={(e) => handleFilter(e)} className="mb-2 me-2">
+                <Dropdown.Toggle variant="dark">
                     {filterValue}
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="ingredient-dropdown">
@@ -29,6 +29,6 @@ export default function FilterDropdown() {
                     }
                 </Dropdown.Menu>
             </Dropdown>
-        </>
+        
     );
 }

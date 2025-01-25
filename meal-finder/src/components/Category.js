@@ -21,8 +21,8 @@ export default function Category() {
         dispatch(data);
     };
     return (
-        <Dropdown onSelect={(e) => handleFilterValue(e)}>
-            <Dropdown.Toggle variant="info">
+        <Dropdown onSelect={(e) => handleFilterValue(e)} className="mb-2 me-2">
+            <Dropdown.Toggle variant="dark">
                 {category}
             </Dropdown.Toggle>
 

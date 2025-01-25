@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -36,16 +36,17 @@ export default function MealsList() {
                 <Row>
                     {
                         meals.map((meal, index) => (
-                            <Col lg={3} key={index}>
-                                <div className="border-2 shadow-lg mb-5 p-5">
-                                    <Link to={`/meal/${meal.idMeal}`} onClick={() => mealClickHandler(meal.idMeal)}>
-                                        <h3>{meal.strMeal}</h3>
-                                    </Link>
-                                    <Image
-                                        src={meal.strMealThumb}
-                                        style={{ "height": "16rem", "width": "16rem" }}
-                                        thumbnail />
-                                </div>
+                            <Col lg={4} key={index}>
+                                <Card className="mb-5">
+                                    <Card.Img src={meal.strMealThumb} alt="card image"/>
+                                    <Card.ImgOverlay>
+                                        <Card.Title className="meal-title">
+                                            <Link to={`/meal/${meal.idMeal}`} onClick={() => mealClickHandler(meal.idMeal)} className="text-decoration-none text-white">
+                                                <h3>{meal.strMeal}</h3>
+                                            </Link>
+                                        </Card.Title>
+                                    </Card.ImgOverlay>
+                                </Card>
                             </Col>
 
                         ))
